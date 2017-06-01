@@ -30,10 +30,4 @@ Rails.application.routes.draw do
     root "users#index"
     resources :users
   end
-
-  namespace :api do
-    scope :v1 do
-      post "/authorize" => "authorizes#create", defaults: {format: :json}
-    end
-  end
 end
